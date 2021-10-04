@@ -1,0 +1,29 @@
+*{outline: 1px solid red;}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+header,section{
+    width: 960px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    background-color: skyblue ;
+    padding-left: 16px;
+}
+section{
+    display: flex;
+}
+article{
+    width: 60%;
+}
+ul{
+    list-style-type:'';
+}
+img{
+    scroll-margin-right: 16px ;
+}
+a,a:link,a:visited{
+    text-decoration: none;
+    color: paleturquoise;
+}
