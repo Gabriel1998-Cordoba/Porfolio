@@ -3,7 +3,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 header,section{
-    width: 960px;
+    width: 1000px;
     margin: 0 auto;
 }
 header{
@@ -22,8 +22,31 @@ ul{
 }
 img{
     scroll-margin-right: 16px ;
+    
 }
 a,a:link,a:visited{
     text-decoration: none;
     color: paleturquoise;
+}
+#PROGRESOS{
+   
+}
+#CONOCIMIENTOS{
+   width: 500px;
+    justify-content: left: 20px; ;
+}
+.flex{
+
+    display: flex;
+
+}
+progress{
+  
+}
+table{
+    width: 250;
+    margin: 0 auto;
+}
+#iconos{
+    position: absolute; bottom: 200px;
 }
