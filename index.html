@@ -21,10 +21,17 @@
 .icon-linkedin i {
   color: blue; /* Color para el icono de LinkedIn */
 }
+.burbuja-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .burbuja {
     border-radius: 50%;
     background: #fff;
-    opacity: 0.3; /* Cambiado de -3 a 0.3 */
+    opacity: 0.3;
     position: absolute;
     bottom: 0;
     animation: burbujas 3s linear infinite;
@@ -33,17 +40,22 @@
 .burbuja:nth-child(1) {
     width: 80px;
     height: 80px;
-    left: 5%;
     animation-duration: 3s;
     animation-delay: 3s;
 }
 
 .burbuja:nth-child(2) {
-    width: 100px; /* Cambiado de 10px a 100px */
+    width: 100px;
     height: 100px;
-    left: 35%;
     animation-duration: 3s;
     animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    animation-duration: 3s;
+    animation-delay: 7s;
 }
 
 @keyframes burbujas {
@@ -70,6 +82,15 @@ body {
         }
     </style>
 
+   <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burbujas = document.querySelectorAll('.burbuja');
+        burbujas.forEach(burbuja => {
+            const randomLeft = Math.random() * window.innerWidth;
+            burbuja.style.left = `${randomLeft}px`;
+        });
+    });
+</script>
 </head>
 <body >
 
@@ -82,10 +103,11 @@ body {
     </div>
   </header>
  
-  <div class="burbuja">
-
+  <div class="burbuja-container">
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
   </div>
- 
  
   <div style="border: 5px solid black; border-radius: 15px; padding: 20px; margin-bottom: 5px;">
     <h3 style="margin-left: 20px;">Sobre mi:</h3>
