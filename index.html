@@ -21,62 +21,72 @@
 .icon-linkedin i {
   color: blue; /* Color para el icono de LinkedIn */
 }
+.burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.3; /* Cambiado de -3 a 0.3 */
+    position: absolute;
+    bottom: 0;
+    animation: burbujas 3s linear infinite;
+}
 
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px; /* Cambiado de 10px a 100px */
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+
+body {
+            background-color: black;
+            color: white; /* Esto asegura que el texto sea visible sobre el fondo negro */
+        }
     </style>
-<!-- .burbuja{
-
-  border-radius: 50%;
-  background: #fff;
-  opacity: -3;
-  position:absolute;
-  bottom: 0;
-  
-  animation: burbujas 3s linear infinite;
-  }
-  .burbuja:nth-child(1){
-      width: 80px;
-  height: 80px;
-  left:5%;
-  animation-duration: 3s;
-  animation-delay: 3s;
-  
-  }
-  .burbuja:nth-child(2){
-      width: 10px;
-      height: 100px;
-      left:35%;
-      animation-duration: 3s;
-      animation-delay: 5s;
-  }
-  @keyframes burbujas {
-      0%{
-          bottom: 0;
-          opacity: 0;
-      }
-      30%{
-          transform: translateX(30px);
-      }
-      50%{
-          opacity: .4;
-      }
-      100%{
-          bottom: 100vh;
-          opacity: 0;
-      }
-      
-  } -->
 
 </head>
 <body >
 
   <header style="border: 5px solid black; border-radius: 15px; margin-bottom: 5px;">
     <div style="display: flex; align-items: center; padding:10px;">
-      <img width="100px" height="100px" src="apple-touch-icon.png" alt="MiPersona" style="margin-right: 20px; border-radius: 50%;">
+      <img width="100px" height="100px" src="MiNombre.png" alt="MiPersona" style="margin-right: 20px; border-radius: 50%;">
       <div style="flex-grow: 1; text-align: center;">
         <h2 class="TitulosConfig" style="margin-bottom: 0;">Ruben Gabriel Cordoba</h2>
       </div>
     </div>
   </header>
+ 
+  <div class="burbuja">
+
+  </div>
+ 
+ 
   <div style="border: 5px solid black; border-radius: 15px; padding: 20px; margin-bottom: 5px;">
     <h3 style="margin-left: 20px;">Sobre mi:</h3>
     <p style="margin-left: 40px; margin-right: 20px;">
@@ -87,61 +97,56 @@
     </p>
   </div>
 
-  <div style="  border: 5px solid black; border-radius: 15px;background-color: rgb(131, 129, 204) ;margin-bottom: 5px;">
-     
-    <h3  >Informacion Academica</h3>
-     <p>Actualmente estudio en UTN-FRGP, Tecnico Universitario en Programacion</p>
+
+  <div style="border: 5px solid black; border-radius: 15px; background-color: rgb(76, 3, 80); margin-bottom: 50px; text-align: center; padding: 20px;">
+    <h2 style="text-align: center;">APTITUDES</h2>
+    <img width="200px" height="120px" src="HTML-Icon.jpeg" alt=".net" style="margin: 10px;border-radius: 30%;">
+    <img width="150px" height="120px" src="Css.jpeg" alt="css" style="margin: 10px; border-radius: 30%;">
+    <img width="200px" height="120px" src=".Net.jpeg" alt=".net" style="margin: 10px;border-radius: 30%;">
+    <img width="150px" height="120px" src="CSharp.jpeg" alt="csharp" style="margin: 10px;border-radius: 30%;">
+     <img width="150px" height="120px" src="Sql.png" alt="sql" style="margin: 10px;border-radius: 30%;">
+</div>
+</div>
+<div style="margin-bottom: 10px;">
+  <div style="border: 2px solid black; border-radius: 15px; background-color: rgb(76, 3, 80); padding: 20px;">
+    <h2 style="text-align: center;"> PROYECTOS </h2>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3>Desarrollo de UTNRacer_Apocalipsis en C++</h3>
+            <img style="border-radius: 15px;" width="100px" height="100px" src="ImagenUTNRACER.bmp" alt="icono UTNRacer">
+        </div>
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3>Desarrollo de Gestión en C++, Vivero</h3>
+            <img style="border-radius: 15px;" width="100px" height="100px" src="ImagenVivero.jpg" alt="icono Vivero">
+        </div>
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3>Desarrollo Web en C#, Plataforma de Cursos</h3>
+            <img style="border-radius: 15px;" width="100px" height="100px" src="PlataformaCurso.jpeg" alt="icono Vivero">
+        </div>
     </div>
-   
-
-   <div style="  border: 5px solid black; border-radius: 15px;background-color: rgb(76, 3, 80) ;margin-bottom: 5px;">
-    <h3 style="text-align: center;padding-right: 20%; ">APTITUDES</h3>
-    <img width="100px" height="100px" src="HTML-Icon.jpeg" alt="MiPersona" style="margin-right: 20px; border-radius: 50%;">
-
- </div>
+    <p style="text-align: center; margin-top: 40px;">
+      Las imagenes de los proyectos son solo ilustratrivas. En mi GitHub encontraran alguno de esos proyectos.
+    </p>
 </div>
-<div style="background-color: #161616;margin-bottom: 5px;">
-  <div style="  border: 2px solid black; border-radius: 15px; background-color: rgb(131, 129, 204) ; " >
-    <h3 style="text-align: center;padding: 0%; ">Proyectos Recientes</h3>
-   <div style="display: flex;">
-     <div style="border-radius: 15px;"  class="caja" >   
-      <p>
-       <h3 >Desarrollo   de Space Invader en C++</h3>
-       <img style="border-radius: 15px; " width="50px"  height="50px" src="https://nosomosnonos.com/wp-content/uploads/2019/07/Space-Invaders.jpg"alt="icono SInv">
-      </p>
-    </div>
-    <div style="border-radius: 15px;" class="caja">   
-        <p  >
-         <h3 >Desarrollo de UTNRacer_Apocalipsis en C++</h3>
-         <img style="border-radius: 15px; " width="50px"  height="50px" src="https://imagenesparapeques.com/wp-content/uploads/2021/05/Plantas-Vs-Zombies-automovil.png"alt="icono UTNRacer">
-        </p>
-      </div>
-      <div style="border-radius: 15px;" class="caja">   
-        <p  >
-         <h3 >Desarrollo de Gestion en C++,Vivero</h3>
-         <img style="border-radius: 15px; " width="50px"  height="50px" src="https://th.bing.com/th/id/R.00e27c670d464f8ad21dc20ca794feb6?rik=R7RdZd%2b6too29Q&pid=ImgRaw&r=0"alt="icono Vivero">
-        </p>
-      </div>
+</div>
+</div>
+</div>
+<footer style="margin-top: 50px; display: flex; justify-content: center; align-items: center; background-color: #161616; padding: 10px;">
+  <div class="icon-linkedin" style="margin: 5px;">
+      <a href="https://www.linkedin.com/in/gabriel-cordoba-781642164/">
+          <i class="fa-brands fa-linkedin-in" style="font-size: 4em; color: blue;"></i>
+      </a>
   </div>
-</div>
-</div>
-<footer>
-  <div  style="display: flex;
-  justify-content: center;
-  align-items: center;  background-color: #161616;" >
-  
-  <div class="icon-linkedin" style="margin: 10px;">
- 
-    <a  href="https://www.linkedin.com/in/gabriel-cordoba-781642164/" ><i class="fa-brands fa-linkedin-in" style="font-size: 8em;"></i></a>
-</div>
-  <div style="margin: 10px;" >
-    <a href="https://github.com/Gabriel1998-Cordoba" > <i class="fa-brands fa-github" style="font-size: 8em;"></i></a>
+  <div style="margin: 5px;">
+      <a href="https://github.com/Gabriel1998-Cordoba">
+          <i class="fa-brands fa-github" style="font-size: 4em; color: white;"></i>
+      </a>
   </div>
-  <div class="icon-facebook" style="margin: 10px;" >
-    <a  href="https://www.facebook.com/"><i class="fa-brands fa-facebook"  style="font-size: 8em;"></i></a>
-
+  <div class="icon-facebook" style="margin: 5px;">
+      <a href="https://www.facebook.com/">
+          <i class="fa-brands fa-facebook" style="font-size: 4em; color: blue;"></i>
+      </a>
   </div>
-</div>
 </footer>
 </body>
 
