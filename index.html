@@ -22,7 +22,7 @@
   color: blue; /* Color para el icono de LinkedIn */
 }
 .burbuja-container {
-    position:fixed;
+    position: fixed;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -55,7 +55,7 @@
 .burbuja:nth-child(3) {
     width: 60px;
     height: 60px;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-delay: 7s;
 }
 
@@ -76,12 +76,64 @@
     }
 }
 
-
 body {
-            background-color: black;
-            color: white; /* Esto asegura que el texto sea visible sobre el fondo negro */
-        }
-    </style>
+    background-color: black;
+    color: white; /* Esto asegura que el texto sea visible sobre el fondo negro */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+        margin: 10px;
+    }
+
+    .burbuja:nth-child(1) {
+        width: 40px;
+        height: 40px;
+    }
+
+    .burbuja:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .burbuja:nth-child(3) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+        margin: 5px;
+    }
+
+    .burbuja:nth-child(1) {
+        width: 20px;
+        height: 20px;
+    }
+
+    .burbuja:nth-child(2) {
+        width: 25px;
+        height: 25px;
+    }
+
+    .burbuja:nth-child(3) {
+        width: 15px;
+        height: 15px;
+    }
+}
+</style>
 
    <script defer>
     document.addEventListener('DOMContentLoaded', function() {
@@ -92,6 +144,7 @@ body {
         });
     });
 </script>
+
 </head>
 <body >
 
@@ -123,28 +176,38 @@ body {
 
   <div style="border: 5px solid black; border-radius: 15px; background-color: rgb(76, 3, 80); margin-bottom: 50px; text-align: center; padding: 20px;">
     <h2 style="text-align: center;">APTITUDES</h2>
-    <img width="200px" height="120px" src="HTML-Icon.jpeg" alt="html" style="margin: 10px;border-radius: 30%;">
-    <img width="150px" height="120px" src="Css.jpeg" alt="css" style="margin: 10px; border-radius: 30%;">
-    <img width="200px" height="120px" src="Net.jpeg" alt=".net" style="margin: 10px;border-radius: 30%;">
-    <img width="150px" height="120px" src="CSharp.jpeg" alt="csharp" style="margin: 10px;border-radius: 30%;">
-     <img width="150px" height="120px" src="Sql.png" alt="sql" style="margin: 10px;border-radius: 30%;">
+    <div style="display: inline-block; width: 150px; height: 120px; margin: 10px;">
+        <img src="HTML-Icon.jpeg" alt="html" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30%;">
+    </div>
+    <div style="display: inline-block; width: 150px; height: 120px; margin: 10px;">
+        <img src="Css.jpeg" alt="css" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30%;">
+    </div>
+    <div style="display: inline-block; width: 150px; height: 120px; margin: 10px;">
+        <img src="Net.jpeg" alt=".net" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30%;">
+    </div>
+    <div style="display: inline-block; width: 150px; height: 120px; margin: 10px;">
+        <img src="CSharp.jpeg" alt="csharp" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30%;">
+    </div>
+    <div style="display: inline-block; width: 150px; height: 120px; margin: 10px;">
+        <img src="Sql.png" alt="sql" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30%;">
+    </div>
 </div>
 </div>
 <div style="margin-bottom: 10px;">
   <div style="border: 2px solid black; border-radius: 15px; background-color: rgb(76, 3, 80); padding: 20px;">
     <h2 style="text-align: center;"> PROYECTOS </h2>
-    <div style="display: flex; justify-content: center; gap: 20px;">
-        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <div style="display: flex; justify-content: center; gap: 20px;flex-wrap: wrap;">
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);max-width: 200px;">
             <h3>Desarrollo de UTNRacer_Apocalipsis en C++</h3>
-            <img style="border-radius: 15px;" width="100px" height="100px" src="ImagenUTNRACER.bmp" alt="icono UTNRacer">
+            <img style="border-radius: 15px;" width="100px" height="auto" src="ImagenUTNRACER.bmp" alt="icono UTNRacer">
         </div>
-        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);max-width: 200px;">
             <h3>Desarrollo de Gestión en C++, Vivero</h3>
-            <img style="border-radius: 15px;" width="100px" height="100px" src="ImagenVivero.jpg" alt="icono Vivero">
+            <img style="border-radius: 15px;" width="100px" height="auto" src="ImagenVivero.jpg" alt="icono Vivero">
         </div>
-        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div style="border-radius: 15px; text-align: center; background-color: gray; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);max-width: 200px;">
             <h3>Desarrollo Web en C#, Plataforma de Cursos</h3>
-            <img style="border-radius: 15px;" width="100px" height="100px" src="PlataformaCurso.jpeg" alt="icono Vivero">
+            <img style="border-radius: 15px;" width="100px" height="auto" src="PlataformaCurso.jpeg" alt="icono Vivero">
         </div>
     </div>
     <p style="text-align: center; margin-top: 40px;">
