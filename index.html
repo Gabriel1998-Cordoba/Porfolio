@@ -22,11 +22,10 @@
   color: blue; /* Color para el icono de LinkedIn */
 }
 .burbuja-container {
-  position: fixed;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            pointer-events: none; /* Esto asegura que las burbujas no interfieran con otros elementos */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .burbuja {
@@ -104,11 +103,11 @@ body {
     </div>
   </header>
  
-  <div class="burbuja-container">
+ 
     <div class="burbuja"></div>
     <div class="burbuja"></div>
     <div class="burbuja"></div>
-  </div>
+  
  
   <div style="border: 5px solid black; border-radius: 15px; padding: 20px; margin-bottom: 5px;">
     <h3 style="margin-left: 20px;font-size:1.6em">Sobre mi:</h3>
