@@ -38,6 +38,7 @@
     animation: burbujas 3s linear infinite;
 }
 
+
 .burbuja:nth-child(1) {
     width: 80px;
     height: 80px;
@@ -59,6 +60,17 @@
     animation-delay: 7s;
 }
 
+
+body {
+    background-color: black;
+    color: white; /* Esto asegura que el texto sea visible sobre el fondo negro */
+}
+
+p{
+margin-left: 40px; 
+margin-right: 20px;
+font-size:1.5em
+}
 @keyframes burbujas {
     0% {
         bottom: 0;
@@ -76,10 +88,6 @@
     }
 }
 
-body {
-    background-color: black;
-    color: white; /* Esto asegura que el texto sea visible sobre el fondo negro */
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -87,9 +95,9 @@ body {
         font-size: 1.5em;
     }
 
-    p {
-        font-size: 0.9em;
-        margin: 10px;
+    p {  font-size: 1.2em;
+        margin-left: 20px;
+        margin-right: 10px;
     }
 
     .burbuja:nth-child(1) {
@@ -114,8 +122,11 @@ body {
     }
 
     p {
-        font-size: 0.8em;
-        margin: 5px;
+    
+        font-size: 1em;
+        margin-left: 10px;
+        margin-right: 5px;
+    
     }
 
     .burbuja:nth-child(1) {
@@ -165,7 +176,7 @@ body {
  
   <div style="border: 5px solid black; border-radius: 15px; padding: 20px; margin-bottom: 5px;">
     <h3 style="margin-left: 20px;font-size:1.6em">Sobre mi:</h3>
-    <p style="margin-left: 40px; margin-right: 20px;font-size:1.5em">
+    <p >
       Holaa! Soy Estudiante de la tecnicatura TUP (Tecnico Universitario en Programacion) en la UTN Facultad Regional Pacheco. 
       A lo largo de estos años estudiando he aprendido a desarrollar sitios webs y aplicaciones interactivas.
       Tuve la suerte de participar en varios Proyectos, como crear una Plataforma de Cursos en la web, desarrollar una aplicación de gestión para un Vivero
